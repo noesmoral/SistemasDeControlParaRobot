@@ -1,0 +1,28 @@
+include "pioneer.inc"
+include "map.inc"
+include "sick.inc"
+
+window
+(
+  size [ 809 689 ]     # Tamaño de la ventana de visualización de Stage en píxeles
+  center [0.0 0.0]     # Coordenadas en metros (mundo real) del centro de la ventana
+  scale 40             # Relación entre coordenadas en píxeles y en metros.
+  show_grid 1
+  show_data 1
+)
+
+floorplan
+(
+  name "mimapa"
+  bitmap "autolab.png"
+  size [20.225 17.225 1]	# Tamaño en metros del bitmap. Lo carga centrado en la ventana de Stage
+)
+
+pioneer2dx
+(
+  name "robot1"
+  color "red"
+  localization "odom"		#tipo obtencion posicion
+  pose [0.0 0.0 0.0 0.0]   	#posicion del robot en el mapa
+  sicklaser()			#añade el laser 
+)

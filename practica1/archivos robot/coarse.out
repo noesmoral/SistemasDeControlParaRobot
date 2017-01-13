@@ -1,0 +1,6 @@
+# Coarse trajectory for log file [mydata.log]
+# Format is: scan_index pos_x pos_y rot
+0 0.000000 0.000000 -0.002225
+1 0.141584 -0.000026 0.001824
+2 0.537176 -0.000231 0.048878
+3 0.686530 0.007528 0.088231
